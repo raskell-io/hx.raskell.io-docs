@@ -1,4 +1,4 @@
-{# Sidebar with Table of Contents for Docs Mode #}
+{# Sidebar with Table of Contents for Docs Mode - Modified for nested sections #}
 <aside id="sidebar" class="sidebar" role="complementary" aria-labelledby="sidebar-title">
     {# Resize handle (desktop only) #}
     <div class="sidebar__resize-handle" aria-hidden="true" title="Drag to resize sidebar width"></div>
@@ -15,28 +15,31 @@
 
     <nav class="sidebar__content" aria-label="Documentation navigation">
         <div class="toc">
-            {# Get the root section for docs #}
-            {% set root_section = get_section(path="_index.md") %}
+            {# Get the docs section directly #}
+            {% set docs_section = get_section(path="docs/_index.md") %}
 
-            {% if root_section %}
+            {% if docs_section %}
+            {# Top-level pages (Installation, Quick Start) #}
+            {% if docs_section.pages %}
             <div class="toc__section">
-                <ol class="toc__list toc__list--numbered" start="0">
-                    {% for pg in root_section.pages %}
+                <div class="toc__section-title">Getting Started</div>
+                <ul class="toc__list">
+                    {% for pg in docs_section.pages %}
                     {% if pg.extra.hide_from_toc is not defined or not pg.extra.hide_from_toc %}
                     <li class="toc__item">
                         <a href="{{ pg.permalink | safe }}" class="toc__link {% if current_path is defined and current_path == pg.path %}active{% endif %}">
-                            <span class="toc__number">{{ loop.index0 }}.</span>
                             {{ pg.title }}
                         </a>
                     </li>
                     {% endif %}
                     {% endfor %}
-                </ol>
+                </ul>
             </div>
+            {% endif %}
 
-            {# Subsections #}
-            {% if root_section.subsections %}
-            {% for subsection_path in root_section.subsections %}
+            {# Subsections (Commands, Configuration, Features, etc.) #}
+            {% if docs_section.subsections %}
+            {% for subsection_path in docs_section.subsections %}
             {% set subsection = get_section(path=subsection_path) %}
             <div class="toc__section">
                 <div class="toc__section-title">{{ subsection.title }}</div>

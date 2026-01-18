@@ -36,10 +36,14 @@ Understanding how hx works: project structure, dependency resolution, and build 
 ### [Guides](/docs/guides)
 Step-by-step tutorials and workflow guides.
 
+### [Development](/docs/development)
+Benchmarks, testing, and contributing to hx.
+
 ## Quick Links
 
 - [Installation](/docs/installation)
 - [Quick Start](/docs/quickstart)
 - [CLI Reference](/docs/commands)
 - [hx.toml Reference](/docs/configuration/hx-toml)
+- [Benchmarks](/docs/development/benchmarks)
 - [Troubleshooting](/docs/guides/troubleshooting)
