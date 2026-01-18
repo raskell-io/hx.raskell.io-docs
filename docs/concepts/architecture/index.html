@@ -1,0 +1,263 @@
+<!doctype html><html prefix="og: https://ogp.me/ns#" data-theme=dark lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><meta content="dark light" name=color-scheme><title>Architecture | hx Documentation</title><meta content="Documentation for hx, the extremely fast Haskell package and project manager." name=description><meta content="haskell, package manager, documentation, hx, tutorial, guide" name=keywords><meta content=raskell.io name=author><meta content="index, follow" name=robots><meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name=googlebot><link href=https://hx.raskell.io/docs/docs/concepts/architecture/ rel=canonical><meta content=article property=og:type><meta content=https://hx.raskell.io/docs/docs/concepts/architecture/ property=og:url><meta content=Architecture property=og:title><meta property=og:description><meta content="hx Documentation" property=og:site_name><meta content=en property=og:locale><meta content=summary_large_image name=twitter:card><meta content=https://hx.raskell.io/docs/docs/concepts/architecture/ name=twitter:url><meta content=Architecture name=twitter:title><meta name=twitter:description><script type=application/ld+json>
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://hx.raskell.io/docs#website",
+                "url": "https://hx.raskell.io/docs",
+                "name": "hx Documentation",
+                "description": "Documentation for hx, the extremely fast Haskell package and project manager.",
+                
+                "author": {
+                    "@type": "Person",
+                    "name": "raskell.io"
+                },
+                
+                "inLanguage": "en"
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://hx.raskell.io/docs/docs/concepts/architecture/#webpage",
+                "url": "https://hx.raskell.io/docs/docs/concepts/architecture/",
+                "name": "Architecture",
+                "isPartOf": {
+                    "@id": "https://hx.raskell.io/docs#website"
+                },
+                "description": "",
+                "inLanguage": "en"
+                
+                
+            }
+            
+            ,{
+                "@type": "Article",
+                "@id": "https://hx.raskell.io/docs/docs/concepts/architecture/#article",
+                "isPartOf": {
+                    "@id": "https://hx.raskell.io/docs/docs/concepts/architecture/#webpage"
+                },
+                "headline": "Architecture",
+                
+                
+                
+                
+                "author": {
+                    "@type": "Person",
+                    "name": "raskell.io"
+                },
+                
+                
+                
+                "wordCount": 372,
+                
+                "inLanguage": "en"
+            }
+            
+        ]
+    }
+    </script><script type=application/ld+json>
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "hx Documentation",
+                "item": "https://hx.raskell.io/docs"
+            }
+            
+            
+            
+            ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "hx Documentation",
+                "item": "https://hx.raskell.io/docs/"
+            }
+            
+            
+            
+            ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Documentation",
+                "item": "https://hx.raskell.io/docs/docs/"
+            }
+            
+            
+            
+            ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Concepts",
+                "item": "https://hx.raskell.io/docs/docs/concepts/"
+            }
+            
+            
+            ,{
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Architecture",
+                "item": "https://hx.raskell.io/docs/docs/concepts/architecture/"
+            }
+        ]
+    }
+    </script><link href=https://hx.raskell.io/docs/style.css rel=stylesheet><link as=font crossorigin href=https://hx.raskell.io/docs/fonts/Geist-Variable.woff2 rel=preload type=font/woff2><link as=font crossorigin href=https://hx.raskell.io/docs/fonts/GeistMono-Variable.woff2 rel=preload type=font/woff2><script>(()=>{let c=`auto`;try{var a=localStorage.getItem(`tanuki-theme`)||c;var b=a===c?(window.matchMedia(`(prefers-color-scheme: dark)`).matches?`dark`:`light`):a;document.documentElement.setAttribute(`data-theme`,b);document.documentElement.setAttribute(`data-theme-setting`,a)}catch(a){}})()</script><body class=page-architecture><a class=skip-link href=#main-content>Skip to main content</a><div class="layout layout--docs layout--fixed-header" data-mode=docs><aside aria-labelledby=sidebar-title class=sidebar id=sidebar role=complementary><div title="Drag to resize sidebar width" aria-hidden=true class=sidebar__resize-handle></div><div class=sidebar__header><span class=sidebar__title id=sidebar-title>Table of contents</span><button aria-label="Close sidebar" class=sidebar__close title=Close type=button><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div><nav aria-label="Documentation navigation" class=sidebar__content><div class=toc><div class=toc__section><div class=toc__section-title>Getting Started</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/installation/> Installation </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/quickstart/> Quick Start </a></ul></div><div class=toc__section><div class=toc__section-title>Commands Reference</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/build/> hx build </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/run/> hx run </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/test/> hx test </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/bench/> hx bench </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/check/> hx check </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/repl/> hx repl </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/doc/> hx doc </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/new/> hx new </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/init/> hx init </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/add/> hx add </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/remove/> hx remove </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/update/> hx update </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/lock/> hx lock </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/sync/> hx sync </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/outdated/> hx outdated </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/toolchain/> hx toolchain </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/clean/> hx clean </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/fmt/> hx fmt </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/lint/> hx lint </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/watch/> hx watch </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/doctor/> hx doctor </a></ul></div><div class=toc__section><div class=toc__section-title>Configuration Reference</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/configuration/hx-toml/> hx.toml Reference </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/configuration/lockfile/> Lockfile Reference </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/configuration/environment/> Environment Variables </a></ul></div><div class=toc__section><div class=toc__section-title>Features</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/compiler-backends/> Compiler Backends </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/cross-compilation/> Cross-Compilation </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/toolchain/> Toolchain Management </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/lockfiles/> Lockfiles </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/watch-mode/> Watch Mode </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/formatting-linting/> Formatting & Linting </a></ul></div><div class=toc__section><div class=toc__section-title>Concepts</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/concepts/project-structure/> Project Structure </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/concepts/dependency-resolution/> Dependency Resolution </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/concepts/build-system/> Build System </a><li class=toc__item><a class="toc__link active" href=https://hx.raskell.io/docs/docs/concepts/architecture/> Architecture </a></ul></div><div class=toc__section><div class=toc__section-title>Guides</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/ci-cd/> CI/CD Setup </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/migrating-from-stack/> Migrating from Stack </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/migrating-from-cabal/> Migrating from Cabal </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/creating-library/> Creating a Library </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/development-workflow/> Development Workflow </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/troubleshooting/> Troubleshooting </a></ul></div><div class=toc__section><div class=toc__section-title>On this page</div><ul class=toc__list><li class=toc__item><a class=toc__link href=#overview> Overview </a><li class=toc__item><a class=toc__link href=#design-philosophy> Design Philosophy </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#wrap-then-replace> Wrap Then Replace </a><li class=toc__item><a class=toc__link href=#orchestration-layer> Orchestration Layer </a></ul><li class=toc__item><a class=toc__link href=#crate-structure> Crate Structure </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#crate-responsibilities> Crate Responsibilities </a></ul><li class=toc__item><a class=toc__link href=#key-abstractions> Key Abstractions </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#compilerbackend-trait> CompilerBackend Trait </a><li class=toc__item><a class=toc__link href=#configuration-layering> Configuration Layering </a><li class=toc__item><a class=toc__link href=#diagnostic-system> Diagnostic System </a></ul><li class=toc__item><a class=toc__link href=#command-flow> Command Flow </a><li class=toc__item><a class=toc__link href=#error-handling> Error Handling </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#error-types> Error Types </a><li class=toc__item><a class=toc__link href=#error-propagation> Error Propagation </a><li class=toc__item><a class=toc__link href=#user-facing-errors> User-Facing Errors </a></ul><li class=toc__item><a class=toc__link href=#async-runtime> Async Runtime </a><li class=toc__item><a class=toc__link href=#testing-strategy> Testing Strategy </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#unit-tests> Unit Tests </a><li class=toc__item><a class=toc__link href=#integration-tests> Integration Tests </a><li class=toc__item><a class=toc__link href=#fixture-based-tests> Fixture-Based Tests </a></ul><li class=toc__item><a class=toc__link href=#extension-points> Extension Points </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#adding-a-new-command> Adding a New Command </a><li class=toc__item><a class=toc__link href=#adding-a-new-compiler-backend> Adding a New Compiler Backend </a><li class=toc__item><a class=toc__link href=#adding-configuration-options> Adding Configuration Options </a></ul><li class=toc__item><a class=toc__link href=#dependencies> Dependencies </a><li class=toc__item><a class=toc__link href=#see-also> See Also </a></ul></div></div></nav><div class=sidebar__footer><div class=sidebar__actions-mobile><div class=sidebar__action><span class=sidebar__action-label>Theme</span><button aria-label="Toggle color theme: cycles through light, dark, and auto modes" title="Toggle theme" aria-live=polite class=theme-toggle type=button><span class=theme-toggle__icons> <span aria-hidden=true class=theme-toggle__sun> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=4 /><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> </span> <span aria-hidden=true class=theme-toggle__moon> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> </span> <span aria-hidden=true class=theme-toggle__auto> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=10 /><path d="M12 2a7 7 0 1 0 7 7"/></svg> </span> </span> <span class="sr-only theme-toggle__status">Current theme: auto</span></button></div><a aria-label="View project on GitHub (opens in new tab)" rel="noopener noreferrer" class=sidebar__github href=https://github.com/raskell-io/hx target=_blank> <svg viewbox="0 0 24 24" aria-hidden=true fill=none height=20 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=20 xmlns=http://www.w3.org/2000/svg><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> <span>View on GitHub</span> </a></div><a aria-label="Print all documentation pages (opens print dialog)" href="https://hx.raskell.io/docs/print?auto=true" class=print-button rel=noopener target=_blank> <svg viewbox="0 0 24 24" aria-hidden=true fill=none height=20 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=20 xmlns=http://www.w3.org/2000/svg><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect height=8 width=12 x=6 y=14 /></svg> <span>Print all pages</span> </a></div></aside><div class=layout__main><header class=header role=banner><div class=header__left><button aria-label="Toggle sidebar navigation" title="Toggle sidebar" aria-controls=sidebar aria-expanded=true class=sidebar-toggle type=button><svg class="sidebar-toggle__icon sidebar-toggle__icon--open" viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><rect height=18 rx=2 width=18 x=3 y=3 /><path d="M9 3v18"/><path d="m16 15-3-3 3-3"/></svg> <svg class="sidebar-toggle__icon sidebar-toggle__icon--closed" viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><rect height=18 rx=2 width=18 x=3 y=3 /><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg></button><button aria-label="Open table of contents" class="toc-toggle toc-toggle--docs" title="Table of contents" aria-controls=sidebar aria-expanded=false type=button><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><rect height=18 rx=2 width=18 x=3 y=3 /><path d="M9 3v18"/><path d="m16 15-3-3 3-3"/></svg></button><a aria-label="hx Documentation - Go to homepage" class=header__logo href=https://hx.raskell.io/docs> <span>hx Documentation</span> </a></div><nav aria-label="Main navigation" class=header__nav role=navigation><a class=header__link href=https://hx.raskell.io> Home </a><a class=header__link href=https://github.com/raskell-io/hx> GitHub </a></nav><div aria-label="Site actions" class=header__actions role=group><button aria-label="Open search dialog" title="Search (press /)" aria-haspopup=dialog aria-keyshortcuts=/ class=search-toggle type=button><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=11 cy=11 r=8 /><path d="m21 21-4.3-4.3"/></svg></button><div class=header__actions-desktop><button aria-label="Toggle color theme: cycles through light, dark, and auto modes" title="Toggle theme" aria-live=polite class=theme-toggle type=button><span class=theme-toggle__icons> <span aria-hidden=true class=theme-toggle__sun> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=4 /><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> </span> <span aria-hidden=true class=theme-toggle__moon> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> </span> <span aria-hidden=true class=theme-toggle__auto> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=10 /><path d="M12 2a7 7 0 1 0 7 7"/></svg> </span> </span> <span class="sr-only theme-toggle__status">Current theme: auto</span></button><a aria-label="View project on GitHub (opens in new tab)" class="btn btn--icon btn--ghost" rel="noopener noreferrer" href=https://github.com/raskell-io/hx target=_blank title=GitHub> <svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> </a></div></div></header><nav aria-label="Page navigation" class=nav-buttons><a aria-label="Previous: Build System" class="nav-button nav-button--prev" href=https://hx.raskell.io/docs/docs/concepts/build-system/> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="m15 18-6-6 6-6"/></svg> <span class=nav-button__label> Build System <span class=nav-button__shortcut>←</span> </span> </a><div class="nav-button nav-button--next disabled" aria-hidden=true><svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="m9 18 6-6-6-6"/></svg></div></nav><main aria-label="Main content" class=main-content id=main-content role=main><article aria-labelledby=article-title class=article itemscope itemtype=https://schema.org/Article><header class="article__header article__header--docs"><h1 id=article-title itemprop=headline>Architecture</h1></header><div class=article__content itemprop=articleBody><p>How hx is built internally.<h2 id=overview>Overview</h2><p>hx is a Rust CLI application that orchestrates existing Haskell tools. It follows a modular crate architecture with clear separation of concerns.<h2 id=design-philosophy>Design Philosophy</h2><h3 id=wrap-then-replace>Wrap Then Replace</h3><p>hx wraps existing tools rather than replacing them:<ol><li><strong>Wrap</strong> — Call existing tools (Cabal, GHC)<li><strong>Tame</strong> — Provide better UX on top<li><strong>Replace</strong> — Optionally replace components later</ol><p>This approach provides:<ul><li>Immediate compatibility<li>Gradual improvement<li>Safe fallback</ul><h3 id=orchestration-layer>Orchestration Layer</h3><p>hx acts as an orchestrator:<pre><code>hx build
+    │
+    ▼
+Read config (hx.toml)
+    │
+    ▼
+Detect toolchain
+    │
+    ▼
+Call cabal build (or bhc build)
+    │
+    ▼
+Parse output
+    │
+    ▼
+Display formatted results
+</code></pre><h2 id=crate-structure>Crate Structure</h2><p>hx is organized as a Rust workspace:<pre><code>hx/
+├── Cargo.toml             # Workspace definition
+├── crates/
+│   ├── hx-cli/            # CLI entry point
+│   ├── hx-core/           # Core orchestration
+│   ├── hx-config/         # Configuration parsing
+│   ├── hx-toolchain/      # Toolchain management
+│   ├── hx-compiler/       # Compiler abstraction
+│   ├── hx-cabal/          # Cabal wrapper
+│   ├── hx-bhc/            # BHC backend
+│   ├── hx-lock/           # Lockfile handling
+│   ├── hx-doctor/         # Diagnostics
+│   ├── hx-ui/             # Terminal UI
+│   └── hx-cache/          # Caching
+</code></pre><h3 id=crate-responsibilities>Crate Responsibilities</h3><table><thead><tr><th>Crate<th>Responsibility<tbody><tr><td><code>hx-cli</code><td>Command parsing, dispatch<tr><td><code>hx-core</code><td>Project context, orchestration<tr><td><code>hx-config</code><td>Parse hx.toml, merge defaults<tr><td><code>hx-toolchain</code><td>Detect/install GHC, Cabal, BHC<tr><td><code>hx-compiler</code><td>Compiler backend abstraction<tr><td><code>hx-cabal</code><td>Cabal command execution<tr><td><code>hx-bhc</code><td>BHC backend implementation<tr><td><code>hx-lock</code><td>Lockfile read/write<tr><td><code>hx-doctor</code><td>Health checks<tr><td><code>hx-ui</code><td>Progress, spinners, colors<tr><td><code>hx-cache</code><td>Artifact caching</table><h2 id=key-abstractions>Key Abstractions</h2><h3 id=compilerbackend-trait>CompilerBackend Trait</h3><p>Unified interface for different compilers:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>#[async_trait]
+pub trait CompilerBackend: Send + Sync {
+    fn name(&self) -> &str;
+    fn description(&self) -> &str;
+
+    async fn detect(&self) -> Result&LTCompilerStatus>;
+    async fn version(&self) -> Result&LTString>;
+
+    async fn build(
+        &self,
+        project_root: &Path,
+        options: &BuildOptions,
+        output: &Output,
+    ) -> Result&LTBuildResult>;
+
+    async fn check(
+        &self,
+        project_root: &Path,
+        options: &CheckOptions,
+        output: &Output,
+    ) -> Result&LTCheckResult>;
+
+    async fn run(
+        &self,
+        project_root: &Path,
+        options: &RunOptions,
+        output: &Output,
+    ) -> Result&LTRunResult>;
+
+    fn parse_diagnostics(&self, raw_output: &str) -> Vec&LTDiagnostic>;
+}
+</code></pre><p>Implementations:<ul><li><code>GhcBackend</code> — Wraps Cabal for GHC builds<li><code>BhcBackend</code> — Invokes BHC directly</ul><h3 id=configuration-layering>Configuration Layering</h3><p>Settings are merged from multiple sources:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>struct Config {
+    // Merged from:
+    // 1. Built-in defaults
+    // 2. User config (~/.config/hx/config.toml)
+    // 3. Project config (hx.toml)
+    // 4. Environment variables
+    // 5. Command-line flags
+}
+</code></pre><h3 id=diagnostic-system>Diagnostic System</h3><p>Structured error messages:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>pub struct Diagnostic {
+    pub severity: Severity,      // Error, Warning, Info
+    pub code: Option&LTString>,    // E001, W042
+    pub message: String,         // What went wrong
+    pub location: Option&LTLocation>,
+    pub fixes: Vec&LTFix>,         // Suggested fixes
+    pub hints: Vec&LTString>,      // Additional context
+}
+</code></pre><h2 id=command-flow>Command Flow</h2><p>Example: <code>hx build --release</code><pre><code>hx-cli
+  │
+  ├─ Parse args with clap
+  │
+  └─ Call build::execute()
+         │
+         ├─ hx-config: Load hx.toml
+         │
+         ├─ hx-toolchain: Verify GHC available
+         │
+         ├─ hx-lock: Check lockfile
+         │
+         ├─ hx-compiler: Get backend
+         │     │
+         │     └─ hx-cabal (or hx-bhc)
+         │           │
+         │           └─ Execute: cabal build --ghc-options=-O2
+         │
+         ├─ Parse stdout/stderr
+         │
+         └─ hx-ui: Display results
+</code></pre><h2 id=error-handling>Error Handling</h2><h3 id=error-types>Error Types</h3><p>Each crate defines its own errors:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>// hx-config
+#[derive(Debug, thiserror::Error)]
+pub enum ConfigError {
+    #[error("failed to read config: {path}")]
+    ReadError { path: PathBuf, source: io::Error },
+
+    #[error("invalid TOML: {0}")]
+    ParseError(#[from] toml::de::Error),
+}
+</code></pre><h3 id=error-propagation>Error Propagation</h3><p>Errors bubble up with context:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>fn load_config(path: &Path) -> Result&LTConfig> {
+    let contents = fs::read_to_string(path)
+        .map_err(|e| ConfigError::ReadError {
+            path: path.to_path_buf(),
+            source: e,
+        })?;
+
+    toml::from_str(&contents)?
+}
+</code></pre><h3 id=user-facing-errors>User-Facing Errors</h3><p>CLI converts to user-friendly format:<pre><code>error: Failed to read config
+  path: /project/hx.toml
+  cause: Permission denied
+
+fix: Check file permissions
+     chmod 644 hx.toml
+</code></pre><h2 id=async-runtime>Async Runtime</h2><p>hx uses Tokio for async operations:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>#[tokio::main]
+async fn main() -> Result<()> {
+    let cli = Cli::parse();
+    match cli.command {
+        Commands::Build(args) => build::execute(args).await,
+        Commands::Test(args) => test::execute(args).await,
+        // ...
+    }
+}
+</code></pre><p>Async is used for:<ul><li>Process execution<li>File I/O<li>Network requests (downloads)<li>Concurrent operations</ul><h2 id=testing-strategy>Testing Strategy</h2><h3 id=unit-tests>Unit Tests</h3><p>In each crate’s <code>src/</code>:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_parse_config() {
+        let toml = r#"
+            [project]
+            name = "test"
+        "#;
+        let config: Config = toml::from_str(toml).unwrap();
+        assert_eq!(config.project.name, "test");
+    }
+}
+</code></pre><h3 id=integration-tests>Integration Tests</h3><p>In <code>tests/</code> directories:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>#[test]
+fn test_init_creates_files() {
+    let temp = tempdir().unwrap();
+    // Run hx init
+    // Verify files created
+}
+</code></pre><h3 id=fixture-based-tests>Fixture-Based Tests</h3><p>Using golden files:<pre class=language-rust data-lang=rust><code class=language-rust data-lang=rust>#[test]
+fn test_error_format() {
+    let error = make_error();
+    let output = format_error(&error);
+    insta::assert_snapshot!(output);
+}
+</code></pre><h2 id=extension-points>Extension Points</h2><h3 id=adding-a-new-command>Adding a New Command</h3><ol><li>Add to <code>hx-cli/src/commands/</code><li>Register in <code>hx-cli/src/cli.rs</code><li>Implement command logic</ol><h3 id=adding-a-new-compiler-backend>Adding a New Compiler Backend</h3><ol><li>Create new crate (<code>hx-newbackend</code>)<li>Implement <code>CompilerBackend</code> trait<li>Register in <code>hx-compiler/src/registry.rs</code></ol><h3 id=adding-configuration-options>Adding Configuration Options</h3><ol><li>Add to <code>hx-config/src/manifest.rs</code><li>Add <code>Combine</code> impl in <code>hx-config/src/combine.rs</code><li>Document in user docs</ol><h2 id=dependencies>Dependencies</h2><p>Key Rust dependencies:<table><thead><tr><th>Crate<th>Purpose<tbody><tr><td><code>clap</code><td>CLI parsing<tr><td><code>tokio</code><td>Async runtime<tr><td><code>serde</code><td>Serialization<tr><td><code>toml</code><td>TOML parsing<tr><td><code>tracing</code><td>Logging<tr><td><code>thiserror</code><td>Error definitions<tr><td><code>anyhow</code><td>Error handling<tr><td><code>indicatif</code><td>Progress bars<tr><td><code>console</code><td>Terminal colors</table><h2 id=see-also>See Also</h2><ul><li><a rel="noopener nofollow noreferrer" href=https://github.com/raskell-io/hx target=_blank>GitHub Repository</a><li><a rel="noopener nofollow noreferrer" href=https://github.com/raskell-io/hx/blob/main/CONTRIBUTING.md target=_blank>Contributing Guide</a></ul></div><meta content=raskell.io itemprop=author></article><nav aria-label="Page navigation" class=page-nav></nav></main></div></div><div aria-hidden=true class=sidebar-overlay></div><div aria-describedby=search-description aria-labelledby=search-title aria-modal=true class=search-overlay role=dialog><div class=search><h2 class=sr-only id=search-title>Search documentation</h2><p class=sr-only id=search-description>Type to search. Use arrow keys to navigate results, Enter to select, Escape to close.<div class=search__input-wrapper><span aria-hidden=true class=search__icon> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=11 cy=11 r=8 /><path d="m21 21-4.3-4.3"/></svg> </span><input aria-label="Search query" placeholder="Search documentation..." aria-autocomplete=list aria-controls=search-results autocomplete=off autofocus class=search__input type=search><span aria-hidden=true class=search__shortcut>/</span><button aria-label="Close search dialog" title="Close (Esc)" class=search__close type=button><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div><div aria-label="Search results" class=search__results id=search-results role=listbox></div><footer class=search__footer><nav aria-label="Keyboard shortcuts" class=search__hints><span class=search__hint> <kbd aria-label="Up and down arrows">↑</kbd><kbd aria-hidden=true>↓</kbd> <span>Navigate</span> </span><span class=search__hint> <kbd aria-label=Enter>↵</kbd> <span>Select</span> </span><span class=search__hint> <kbd aria-label=Escape>esc</kbd> <span>Close</span> </span></nav><span class=search__powered-by>Powered by <a aria-label="elasticlunr.js on GitHub (opens in new tab)" rel="noopener noreferrer" href=https://github.com/weixsong/elasticlunr.js target=_blank>elasticlunr</a></span></footer></div></div><button aria-label="Scroll to top" class="fab scroll-to-top" title="Scroll to top"><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="m18 15-6-6-6 6"/></svg></button><script defer src=https://hx.raskell.io/docs/js/theme.js></script><script defer src=https://hx.raskell.io/docs/js/navigation.js></script><script defer src=https://hx.raskell.io/docs/js/code.js></script><script src=https://hx.raskell.io/docs/elasticlunr.min.js></script><script src=https://hx.raskell.io/docs/search_index.en.js></script><script defer src=https://hx.raskell.io/docs/js/search.js></script>

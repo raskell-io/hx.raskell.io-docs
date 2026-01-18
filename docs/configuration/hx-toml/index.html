@@ -1,0 +1,265 @@
+<!doctype html><html prefix="og: https://ogp.me/ns#" data-theme=dark lang=en><head><meta charset=UTF-8><meta content="width=device-width,initial-scale=1.0" name=viewport><meta content="dark light" name=color-scheme><title>hx.toml Reference | hx Documentation</title><meta content="Documentation for hx, the extremely fast Haskell package and project manager." name=description><meta content="haskell, package manager, documentation, hx, tutorial, guide" name=keywords><meta content=raskell.io name=author><meta content="index, follow" name=robots><meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name=googlebot><link href=https://hx.raskell.io/docs/docs/configuration/hx-toml/ rel=canonical><meta content=article property=og:type><meta content=https://hx.raskell.io/docs/docs/configuration/hx-toml/ property=og:url><meta content="hx.toml Reference" property=og:title><meta property=og:description><meta content="hx Documentation" property=og:site_name><meta content=en property=og:locale><meta content=summary_large_image name=twitter:card><meta content=https://hx.raskell.io/docs/docs/configuration/hx-toml/ name=twitter:url><meta content="hx.toml Reference" name=twitter:title><meta name=twitter:description><script type=application/ld+json>
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://hx.raskell.io/docs#website",
+                "url": "https://hx.raskell.io/docs",
+                "name": "hx Documentation",
+                "description": "Documentation for hx, the extremely fast Haskell package and project manager.",
+                
+                "author": {
+                    "@type": "Person",
+                    "name": "raskell.io"
+                },
+                
+                "inLanguage": "en"
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://hx.raskell.io/docs/docs/configuration/hx-toml/#webpage",
+                "url": "https://hx.raskell.io/docs/docs/configuration/hx-toml/",
+                "name": "hx.toml Reference",
+                "isPartOf": {
+                    "@id": "https://hx.raskell.io/docs#website"
+                },
+                "description": "",
+                "inLanguage": "en"
+                
+                
+            }
+            
+            ,{
+                "@type": "Article",
+                "@id": "https://hx.raskell.io/docs/docs/configuration/hx-toml/#article",
+                "isPartOf": {
+                    "@id": "https://hx.raskell.io/docs/docs/configuration/hx-toml/#webpage"
+                },
+                "headline": "hx.toml Reference",
+                
+                
+                
+                
+                "author": {
+                    "@type": "Person",
+                    "name": "raskell.io"
+                },
+                
+                
+                
+                "wordCount": 426,
+                
+                "inLanguage": "en"
+            }
+            
+        ]
+    }
+    </script><script type=application/ld+json>
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "hx Documentation",
+                "item": "https://hx.raskell.io/docs"
+            }
+            
+            
+            
+            ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "hx Documentation",
+                "item": "https://hx.raskell.io/docs/"
+            }
+            
+            
+            
+            ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Documentation",
+                "item": "https://hx.raskell.io/docs/docs/"
+            }
+            
+            
+            
+            ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Configuration Reference",
+                "item": "https://hx.raskell.io/docs/docs/configuration/"
+            }
+            
+            
+            ,{
+                "@type": "ListItem",
+                "position": 5,
+                "name": "hx.toml Reference",
+                "item": "https://hx.raskell.io/docs/docs/configuration/hx-toml/"
+            }
+        ]
+    }
+    </script><link href=https://hx.raskell.io/docs/style.css rel=stylesheet><link as=font crossorigin href=https://hx.raskell.io/docs/fonts/Geist-Variable.woff2 rel=preload type=font/woff2><link as=font crossorigin href=https://hx.raskell.io/docs/fonts/GeistMono-Variable.woff2 rel=preload type=font/woff2><script>(()=>{let c=`auto`;try{var a=localStorage.getItem(`tanuki-theme`)||c;var b=a===c?(window.matchMedia(`(prefers-color-scheme: dark)`).matches?`dark`:`light`):a;document.documentElement.setAttribute(`data-theme`,b);document.documentElement.setAttribute(`data-theme-setting`,a)}catch(a){}})()</script><body class=page-hx-toml><a class=skip-link href=#main-content>Skip to main content</a><div class="layout layout--docs layout--fixed-header" data-mode=docs><aside aria-labelledby=sidebar-title class=sidebar id=sidebar role=complementary><div title="Drag to resize sidebar width" aria-hidden=true class=sidebar__resize-handle></div><div class=sidebar__header><span class=sidebar__title id=sidebar-title>Table of contents</span><button aria-label="Close sidebar" class=sidebar__close title=Close type=button><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div><nav aria-label="Documentation navigation" class=sidebar__content><div class=toc><div class=toc__section><div class=toc__section-title>Getting Started</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/installation/> Installation </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/quickstart/> Quick Start </a></ul></div><div class=toc__section><div class=toc__section-title>Commands Reference</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/build/> hx build </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/run/> hx run </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/test/> hx test </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/bench/> hx bench </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/check/> hx check </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/repl/> hx repl </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/doc/> hx doc </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/new/> hx new </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/init/> hx init </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/add/> hx add </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/remove/> hx remove </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/update/> hx update </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/lock/> hx lock </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/sync/> hx sync </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/outdated/> hx outdated </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/toolchain/> hx toolchain </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/clean/> hx clean </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/fmt/> hx fmt </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/lint/> hx lint </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/watch/> hx watch </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/commands/doctor/> hx doctor </a></ul></div><div class=toc__section><div class=toc__section-title>Configuration Reference</div><ul class=toc__list><li class=toc__item><a class="toc__link active" href=https://hx.raskell.io/docs/docs/configuration/hx-toml/> hx.toml Reference </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/configuration/lockfile/> Lockfile Reference </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/configuration/environment/> Environment Variables </a></ul></div><div class=toc__section><div class=toc__section-title>Features</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/compiler-backends/> Compiler Backends </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/cross-compilation/> Cross-Compilation </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/toolchain/> Toolchain Management </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/lockfiles/> Lockfiles </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/watch-mode/> Watch Mode </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/features/formatting-linting/> Formatting & Linting </a></ul></div><div class=toc__section><div class=toc__section-title>Concepts</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/concepts/project-structure/> Project Structure </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/concepts/dependency-resolution/> Dependency Resolution </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/concepts/build-system/> Build System </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/concepts/architecture/> Architecture </a></ul></div><div class=toc__section><div class=toc__section-title>Guides</div><ul class=toc__list><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/ci-cd/> CI/CD Setup </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/migrating-from-stack/> Migrating from Stack </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/migrating-from-cabal/> Migrating from Cabal </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/creating-library/> Creating a Library </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/development-workflow/> Development Workflow </a><li class=toc__item><a class=toc__link href=https://hx.raskell.io/docs/docs/guides/troubleshooting/> Troubleshooting </a></ul></div><div class=toc__section><div class=toc__section-title>On this page</div><ul class=toc__list><li class=toc__item><a class=toc__link href=#overview> Overview </a><li class=toc__item><a class=toc__link href=#project> [project] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields> Fields </a></ul><li class=toc__item><a class=toc__link href=#toolchain> [toolchain] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-1> Fields </a><li class=toc__item><a class=toc__link href=#examples> Examples </a></ul><li class=toc__item><a class=toc__link href=#compiler> [compiler] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-2> Fields </a><li class=toc__item><a class=toc__link href=#compiler-ghc> [compiler.ghc] </a><li class=toc__item><a class=toc__link href=#compiler-bhc> [compiler.bhc] </a><li class=toc__item><a class=toc__link href=#examples-1> Examples </a></ul><li class=toc__item><a class=toc__link href=#build> [build] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-3> Fields </a><li class=toc__item><a class=toc__link href=#examples-2> Examples </a></ul><li class=toc__item><a class=toc__link href=#test> [test] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-4> Fields </a><li class=toc__item><a class=toc__link href=#test-coverage> [test.coverage] </a></ul><li class=toc__item><a class=toc__link href=#bench> [bench] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-5> Fields </a></ul><li class=toc__item><a class=toc__link href=#run> [run] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-6> Fields </a></ul><li class=toc__item><a class=toc__link href=#repl> [repl] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-7> Fields </a></ul><li class=toc__item><a class=toc__link href=#doc> [doc] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-8> Fields </a></ul><li class=toc__item><a class=toc__link href=#fmt> [fmt] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-9> Fields </a></ul><li class=toc__item><a class=toc__link href=#lint> [lint] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-10> Fields </a></ul><li class=toc__item><a class=toc__link href=#watch> [watch] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-11> Fields </a></ul><li class=toc__item><a class=toc__link href=#dependencies> [dependencies] </a> <ul class="toc__list toc__list--nested"><li class=toc__item><a class=toc__link href=#fields-12> Fields </a></ul><li class=toc__item><a class=toc__link href=#complete-example> Complete Example </a></ul></div></div></nav><div class=sidebar__footer><div class=sidebar__actions-mobile><div class=sidebar__action><span class=sidebar__action-label>Theme</span><button aria-label="Toggle color theme: cycles through light, dark, and auto modes" title="Toggle theme" aria-live=polite class=theme-toggle type=button><span class=theme-toggle__icons> <span aria-hidden=true class=theme-toggle__sun> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=4 /><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> </span> <span aria-hidden=true class=theme-toggle__moon> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> </span> <span aria-hidden=true class=theme-toggle__auto> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=10 /><path d="M12 2a7 7 0 1 0 7 7"/></svg> </span> </span> <span class="sr-only theme-toggle__status">Current theme: auto</span></button></div><a aria-label="View project on GitHub (opens in new tab)" rel="noopener noreferrer" class=sidebar__github href=https://github.com/raskell-io/hx target=_blank> <svg viewbox="0 0 24 24" aria-hidden=true fill=none height=20 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=20 xmlns=http://www.w3.org/2000/svg><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> <span>View on GitHub</span> </a></div><a aria-label="Print all documentation pages (opens print dialog)" href="https://hx.raskell.io/docs/print?auto=true" class=print-button rel=noopener target=_blank> <svg viewbox="0 0 24 24" aria-hidden=true fill=none height=20 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=20 xmlns=http://www.w3.org/2000/svg><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect height=8 width=12 x=6 y=14 /></svg> <span>Print all pages</span> </a></div></aside><div class=layout__main><header class=header role=banner><div class=header__left><button aria-label="Toggle sidebar navigation" title="Toggle sidebar" aria-controls=sidebar aria-expanded=true class=sidebar-toggle type=button><svg class="sidebar-toggle__icon sidebar-toggle__icon--open" viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><rect height=18 rx=2 width=18 x=3 y=3 /><path d="M9 3v18"/><path d="m16 15-3-3 3-3"/></svg> <svg class="sidebar-toggle__icon sidebar-toggle__icon--closed" viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><rect height=18 rx=2 width=18 x=3 y=3 /><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/></svg></button><button aria-label="Open table of contents" class="toc-toggle toc-toggle--docs" title="Table of contents" aria-controls=sidebar aria-expanded=false type=button><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><rect height=18 rx=2 width=18 x=3 y=3 /><path d="M9 3v18"/><path d="m16 15-3-3 3-3"/></svg></button><a aria-label="hx Documentation - Go to homepage" class=header__logo href=https://hx.raskell.io/docs> <span>hx Documentation</span> </a></div><nav aria-label="Main navigation" class=header__nav role=navigation><a class=header__link href=https://hx.raskell.io> Home </a><a class=header__link href=https://github.com/raskell-io/hx> GitHub </a></nav><div aria-label="Site actions" class=header__actions role=group><button aria-label="Open search dialog" title="Search (press /)" aria-haspopup=dialog aria-keyshortcuts=/ class=search-toggle type=button><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=11 cy=11 r=8 /><path d="m21 21-4.3-4.3"/></svg></button><div class=header__actions-desktop><button aria-label="Toggle color theme: cycles through light, dark, and auto modes" title="Toggle theme" aria-live=polite class=theme-toggle type=button><span class=theme-toggle__icons> <span aria-hidden=true class=theme-toggle__sun> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=4 /><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> </span> <span aria-hidden=true class=theme-toggle__moon> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> </span> <span aria-hidden=true class=theme-toggle__auto> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=12 cy=12 r=10 /><path d="M12 2a7 7 0 1 0 7 7"/></svg> </span> </span> <span class="sr-only theme-toggle__status">Current theme: auto</span></button><a aria-label="View project on GitHub (opens in new tab)" class="btn btn--icon btn--ghost" rel="noopener noreferrer" href=https://github.com/raskell-io/hx target=_blank title=GitHub> <svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> </a></div></div></header><nav aria-label="Page navigation" class=nav-buttons><div class="nav-button nav-button--prev disabled" aria-hidden=true><svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="m15 18-6-6 6-6"/></svg></div><a aria-label="Next: Lockfile Reference" class="nav-button nav-button--next" href=https://hx.raskell.io/docs/docs/configuration/lockfile/> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="m9 18 6-6-6-6"/></svg> <span class=nav-button__label> Lockfile Reference <span class=nav-button__shortcut>→</span> </span> </a></nav><main aria-label="Main content" class=main-content id=main-content role=main><article aria-labelledby=article-title class=article itemscope itemtype=https://schema.org/Article><header class="article__header article__header--docs"><h1 id=article-title itemprop=headline>hx.toml Reference</h1></header><div class=article__content itemprop=articleBody><p>Complete reference for the <code>hx.toml</code> configuration file.<h2 id=overview>Overview</h2><p><code>hx.toml</code> is the main configuration file for hx projects. It uses the TOML format and lives in your project root.<h2 id=project>[project]</h2><p>Project metadata.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[project]
+name = "my-project"           # Package name
+version = "0.1.0"             # Package version
+description = "My library"    # Short description
+license = "MIT"               # SPDX license identifier
+authors = ["Your Name &LTyou@example.com>"]
+repository = "https://github.com/user/project"
+homepage = "https://project.example.com"
+</code></pre><h3 id=fields>Fields</h3><table><thead><tr><th>Field<th>Type<th>Description<tbody><tr><td><code>name</code><td>string<td>Package name (must match .cabal)<tr><td><code>version</code><td>string<td>Semantic version<tr><td><code>description</code><td>string<td>Short description<tr><td><code>license</code><td>string<td>SPDX license identifier<tr><td><code>authors</code><td>array<td>List of authors<tr><td><code>repository</code><td>string<td>Repository URL<tr><td><code>homepage</code><td>string<td>Project homepage URL</table><h2 id=toolchain>[toolchain]</h2><p>Toolchain version pinning.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[toolchain]
+ghc = "9.8.2"                 # GHC version
+cabal = "3.10.3.0"            # Cabal version (optional)
+resolver = "lts-22.0"         # Stackage resolver (optional)
+</code></pre><h3 id=fields-1>Fields</h3><table><thead><tr><th>Field<th>Type<th>Description<tbody><tr><td><code>ghc</code><td>string<td>Required GHC version<tr><td><code>cabal</code><td>string<td>Required Cabal version<tr><td><code>resolver</code><td>string<td>Stackage resolver name</table><h3 id=examples>Examples</h3><pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml># Pin exact GHC version
+[toolchain]
+ghc = "9.8.2"
+
+# Pin both GHC and Cabal
+[toolchain]
+ghc = "9.8.2"
+cabal = "3.10.3.0"
+
+# Use Stackage resolver
+[toolchain]
+resolver = "lts-22.0"
+</code></pre><h2 id=compiler>[compiler]</h2><p>Compiler backend configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[compiler]
+backend = "ghc"               # "ghc" or "bhc"
+version = "9.8.2"             # Compiler version (overrides toolchain)
+</code></pre><h3 id=fields-2>Fields</h3><table><thead><tr><th>Field<th>Type<th>Description<tbody><tr><td><code>backend</code><td>string<td>Compiler backend: <code>"ghc"</code> (default) or <code>"bhc"</code><tr><td><code>version</code><td>string<td>Compiler version</table><h3 id=compiler-ghc>[compiler.ghc]</h3><p>GHC-specific configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[compiler.ghc]
+version = "9.8.2"             # GHC version
+options = ["-Wall"]           # Default GHC options
+</code></pre><h3 id=compiler-bhc>[compiler.bhc]</h3><p>BHC (Basel Haskell Compiler) configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[compiler.bhc]
+profile = "numeric"           # "default", "server", "numeric", "edge"
+emit_kernel_report = false    # Generate kernel optimization report
+tensor_fusion = false         # Enable tensor fusion optimization
+target = "aarch64-linux-gnu"  # Cross-compilation target
+</code></pre><h4 id=bhc-profiles>BHC Profiles</h4><table><thead><tr><th>Profile<th>Description<tbody><tr><td><code>default</code><td>Balanced for general use<tr><td><code>server</code><td>Optimized for server workloads<tr><td><code>numeric</code><td>Optimized for numerical computation<tr><td><code>edge</code><td>Optimized for edge/embedded devices</table><h3 id=examples-1>Examples</h3><pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml># Use GHC (default)
+[compiler]
+backend = "ghc"
+
+# Use BHC with numeric optimizations
+[compiler]
+backend = "bhc"
+
+[compiler.bhc]
+profile = "numeric"
+tensor_fusion = true
+</code></pre><h2 id=build>[build]</h2><p>Build configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[build]
+release = false               # Build with optimizations by default
+jobs = 4                      # Parallel jobs (0 = auto)
+ghc-options = ["-Wall", "-Wextra"]
+split-sections = false        # Enable split sections (smaller binaries)
+incremental = true            # Enable incremental builds
+</code></pre><h3 id=fields-3>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>release</code><td>bool<td><code>false</code><td>Build with optimizations<tr><td><code>jobs</code><td>int<td>CPU count<td>Parallel compilation jobs<tr><td><code>ghc-options</code><td>array<td><code>[]</code><td>Options passed to GHC<tr><td><code>split-sections</code><td>bool<td><code>false</code><td>Enable -split-sections<tr><td><code>incremental</code><td>bool<td><code>true</code><td>Enable incremental builds</table><h3 id=examples-2>Examples</h3><pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml># Development defaults
+[build]
+release = false
+ghc-options = ["-Wall", "-Wcompat"]
+
+# Production build
+[build]
+release = true
+ghc-options = ["-Wall", "-Werror", "-O2"]
+split-sections = true
+
+# Fast iteration
+[build]
+jobs = 0
+incremental = true
+</code></pre><h2 id=test>[test]</h2><p>Test configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[test]
+default-suite = "unit-tests"  # Default test suite to run
+fail-fast = false             # Stop on first failure
+show-timing = true            # Show test timing
+coverage = false              # Generate coverage report
+</code></pre><h3 id=fields-4>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>default-suite</code><td>string<td>all<td>Default test suite<tr><td><code>fail-fast</code><td>bool<td><code>false</code><td>Stop on first failure<tr><td><code>show-timing</code><td>bool<td><code>true</code><td>Display timing info<tr><td><code>coverage</code><td>bool<td><code>false</code><td>Generate coverage</table><h3 id=test-coverage>[test.coverage]</h3><p>Coverage configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[test.coverage]
+enabled = false
+output-dir = "coverage"
+exclude = ["generated/**"]
+</code></pre><h2 id=bench>[bench]</h2><p>Benchmark configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[bench]
+default-suite = "criterion"   # Default benchmark suite
+release = true                # Always build with optimizations
+</code></pre><h3 id=fields-5>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>default-suite</code><td>string<td>all<td>Default benchmark suite<tr><td><code>release</code><td>bool<td><code>true</code><td>Build with optimizations</table><h2 id=run>[run]</h2><p>Run configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[run]
+default-exe = "my-app"        # Default executable
+args = []                     # Default arguments
+</code></pre><h3 id=fields-6>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>default-exe</code><td>string<td>auto<td>Default executable to run<tr><td><code>args</code><td>array<td><code>[]</code><td>Default program arguments</table><h2 id=repl>[repl]</h2><p>REPL configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[repl]
+default = "lib"               # Default component: lib, exe:name, test:name
+auto-load = ["MyProject"]     # Modules to load on start
+ghci-options = ["-XOverloadedStrings"]
+ghci-conf = ".ghci"           # Custom .ghci file
+</code></pre><h3 id=fields-7>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>default</code><td>string<td><code>"lib"</code><td>Default component to load<tr><td><code>auto-load</code><td>array<td><code>[]</code><td>Modules to import<tr><td><code>ghci-options</code><td>array<td><code>[]</code><td>GHCi options<tr><td><code>ghci-conf</code><td>string<td><code>.ghci</code><td>GHCi config file</table><h2 id=doc>[doc]</h2><p>Documentation configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[doc]
+internal = false              # Include internal modules
+haddock-options = ["--hyperlinked-source"]
+output-dir = "docs"           # Output directory
+</code></pre><h3 id=fields-8>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>internal</code><td>bool<td><code>false</code><td>Document internal modules<tr><td><code>haddock-options</code><td>array<td><code>[]</code><td>Haddock options<tr><td><code>output-dir</code><td>string<td>default<td>Documentation output</table><h2 id=fmt>[fmt]</h2><p>Code formatting configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[fmt]
+formatter = "ormolu"          # "ormolu", "fourmolu", "stylish"
+check = false                 # Check only, don't modify
+exclude = ["generated/**"]    # Patterns to exclude
+</code></pre><h3 id=fields-9>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>formatter</code><td>string<td><code>"ormolu"</code><td>Formatter to use<tr><td><code>check</code><td>bool<td><code>false</code><td>Check-only mode<tr><td><code>exclude</code><td>array<td><code>[]</code><td>Excluded patterns</table><h2 id=lint>[lint]</h2><p>Linter configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[lint]
+extra-hints = [".hlint.yaml"] # Additional hint files
+ignore = ["Eta reduce"]       # Ignored hints
+</code></pre><h3 id=fields-10>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>extra-hints</code><td>array<td><code>[]</code><td>Additional hint files<tr><td><code>ignore</code><td>array<td><code>[]</code><td>Ignored hints</table><h2 id=watch>[watch]</h2><p>Watch mode configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[watch]
+clear = true                  # Clear terminal on rebuild
+debounce = 300                # Debounce delay (ms)
+include = ["config/**"]       # Additional patterns to watch
+exclude = ["dist-newstyle/**"] # Patterns to exclude
+</code></pre><h3 id=fields-11>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>clear</code><td>bool<td><code>false</code><td>Clear terminal<tr><td><code>debounce</code><td>int<td><code>300</code><td>Debounce delay in ms<tr><td><code>include</code><td>array<td><code>[]</code><td>Additional watch patterns<tr><td><code>exclude</code><td>array<td><code>[]</code><td>Excluded patterns</table><h2 id=dependencies>[dependencies]</h2><p>Dependency management configuration.<pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[dependencies]
+lock-strategy = "hx"          # "hx" or "cabal-freeze"
+index-state = "2024-01-15T00:00:00Z"
+</code></pre><h3 id=fields-12>Fields</h3><table><thead><tr><th>Field<th>Type<th>Default<th>Description<tbody><tr><td><code>lock-strategy</code><td>string<td><code>"hx"</code><td>Lockfile strategy<tr><td><code>index-state</code><td>string<td>none<td>Hackage index state</table><h2 id=complete-example>Complete Example</h2><pre class=language-toml data-lang=toml><code class=language-toml data-lang=toml>[project]
+name = "my-app"
+version = "1.0.0"
+description = "My awesome Haskell application"
+license = "MIT"
+authors = ["Developer &LTdev@example.com>"]
+repository = "https://github.com/example/my-app"
+
+[toolchain]
+ghc = "9.8.2"
+cabal = "3.10.3.0"
+
+[compiler]
+backend = "ghc"
+
+[compiler.ghc]
+options = ["-Wall", "-Wextra", "-Wcompat"]
+
+[build]
+release = false
+jobs = 4
+split-sections = true
+
+[test]
+fail-fast = true
+show-timing = true
+
+[test.coverage]
+enabled = true
+output-dir = "coverage"
+
+[run]
+default-exe = "my-app"
+args = ["--verbose"]
+
+[repl]
+auto-load = ["MyApp", "MyApp.Config"]
+ghci-options = ["-XOverloadedStrings"]
+
+[fmt]
+formatter = "fourmolu"
+exclude = ["generated/**"]
+
+[lint]
+ignore = ["Use camelCase"]
+
+[watch]
+clear = true
+debounce = 200
+exclude = [".git/**", "dist-newstyle/**"]
+
+[dependencies]
+lock-strategy = "hx"
+</code></pre></div><meta content=raskell.io itemprop=author></article><nav aria-label="Page navigation" class=page-nav></nav></main></div></div><div aria-hidden=true class=sidebar-overlay></div><div aria-describedby=search-description aria-labelledby=search-title aria-modal=true class=search-overlay role=dialog><div class=search><h2 class=sr-only id=search-title>Search documentation</h2><p class=sr-only id=search-description>Type to search. Use arrow keys to navigate results, Enter to select, Escape to close.<div class=search__input-wrapper><span aria-hidden=true class=search__icon> <svg viewbox="0 0 24 24" fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><circle cx=11 cy=11 r=8 /><path d="m21 21-4.3-4.3"/></svg> </span><input aria-label="Search query" placeholder="Search documentation..." aria-autocomplete=list aria-controls=search-results autocomplete=off autofocus class=search__input type=search><span aria-hidden=true class=search__shortcut>/</span><button aria-label="Close search dialog" title="Close (Esc)" class=search__close type=button><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div><div aria-label="Search results" class=search__results id=search-results role=listbox></div><footer class=search__footer><nav aria-label="Keyboard shortcuts" class=search__hints><span class=search__hint> <kbd aria-label="Up and down arrows">↑</kbd><kbd aria-hidden=true>↓</kbd> <span>Navigate</span> </span><span class=search__hint> <kbd aria-label=Enter>↵</kbd> <span>Select</span> </span><span class=search__hint> <kbd aria-label=Escape>esc</kbd> <span>Close</span> </span></nav><span class=search__powered-by>Powered by <a aria-label="elasticlunr.js on GitHub (opens in new tab)" rel="noopener noreferrer" href=https://github.com/weixsong/elasticlunr.js target=_blank>elasticlunr</a></span></footer></div></div><button aria-label="Scroll to top" class="fab scroll-to-top" title="Scroll to top"><svg viewbox="0 0 24 24" aria-hidden=true fill=none height=24 stroke=currentColor stroke-linecap=round stroke-linejoin=round stroke-width=2 width=24 xmlns=http://www.w3.org/2000/svg><path d="m18 15-6-6-6 6"/></svg></button><script defer src=https://hx.raskell.io/docs/js/theme.js></script><script defer src=https://hx.raskell.io/docs/js/navigation.js></script><script defer src=https://hx.raskell.io/docs/js/code.js></script><script src=https://hx.raskell.io/docs/elasticlunr.min.js></script><script src=https://hx.raskell.io/docs/search_index.en.js></script><script defer src=https://hx.raskell.io/docs/js/search.js></script>
